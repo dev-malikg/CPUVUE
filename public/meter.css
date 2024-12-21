@@ -1,0 +1,166 @@
+/* Importing the Mukta font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* Root variable definitions for circle and arrow sizes */
+:root {
+    --circle_size: 175vw;
+    --arrow_size: 200vw;
+}
+
+/* Keyframes animation for rotating */
+@keyframes rotate {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+/* Styling for the entire HTML document */
+html {
+    height: 100%;
+}
+
+/* Styling for the body */
+body {
+    /* background-color: #181a15; */
+    background: linear-gradient(180deg, #171815 -4.49%, #000 100%);
+    font-family: 'Mukta', sans-serif;
+
+    margin: 0px;
+    padding: 0px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the meter container */
+.meter {
+    background-color: black;
+    height: 50%;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Styling for the circle element */
+.circle {
+    position: fixed;
+    top: 630px;
+
+    width: var(--circle_size);
+    height: var(--circle_size);
+
+    border-radius: 100%;
+    background-color: #428c6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the arrow element */
+.arrow {
+    animation: rotate 1.5s;
+    align-self: center;
+    width: 10px;
+    height: var(--arrow_size);
+    background-color: #42473e;
+    border-radius: 9px;
+    border: #e26635 0px solid;
+    border-top-width: 50px;
+    transform: rotate(-20deg);
+    box-shadow: 0 8px 16px 0 rgba(27, 11, 11, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Styling for the up_body container */
+.up_body {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the percentage_div container */
+.percentage_div {
+    align-items: center;
+    display: flex;
+    height: 270px;
+    background-color: #8a8e86;
+}
+
+/* Styling for the sm class */
+.sm {
+    font-size: medium;
+    color: #000;
+    background-color: #ffffff;
+    font-weight: bolder;
+    height: 25px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    border-radius: 100px;
+}
+
+/* Styling for the measure ID */
+#measure {
+    letter-spacing: 0.4px;
+    position: absolute;
+    margin-top: 55vh;
+    color: #8a8e86;
+    word-spacing: 5px;
+}
+
+/* Styling for the cpu_tag ID */
+#cpu_tag {
+    position: absolute;
+    margin-top: 12vh;
+    text-align: center;
+    color: #8a8e86;
+    word-spacing: 8px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the text_percent ID */
+#text_percent {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: 900;
+    align-self: center;
+}
+
+/* Styling for the mydesk class */
+.mydesk {
+    position: fixed;
+    margin-top: 30px;
+    margin-left: 30px;
+    align-self: start;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    color: #8a8e86;
+    background-color: #000000be;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.5s;
+}
+
+/* Styling for hover effect on mydesk class */
+.mydesk:hover {
+    transition-duration: 0.5s;
+    background-color: #000;
+}
+
+/* Styling for active effect on mydesk class */
+.mydesk:active {
+    transition-duration: 0.05s;
+    transform: scale(0.96);
+}
